@@ -1,0 +1,15 @@
+const words = [
+  { word: "Machine", meaning: "(มะชีน') n. เครื่องจักร" ,img:"https://plus.unsplash.com/premium_photo-1682144932026-f5ea5364757a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWFjaGluZXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Magazine", meaning: "(แมกกะซีน') n. นิตยสาร" ,img:"https://images.unsplash.com/photo-1535954741680-a2e24eb05418?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TWFnYXppbmV8ZW58MHx8MHx8fDA%3D"},
+  { word: "Main", meaning: "(เมน) adj. หลัก, สำคัญ" ,img:"https://images.unsplash.com/photo-1542032489-6765cd412be0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1haW58ZW58MHx8MHx8fDA%3D"},
+  { word: "Maintain", meaning: "(เมนเทน') v. รักษาไว้, บำรุงรักษา" ,img:"https://plus.unsplash.com/premium_photo-1675810094948-d4634e766d2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWFpbnRhaW58ZW58MHx8MHx8fDA%3D"},
+  { word: "Major", meaning: "(เม'เจอะ) adj., n. สำคัญ, วิชาเอก" ,img:"https://images.unsplash.com/photo-1644839046428-6f9b57498d9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fE1ham9yfGVufDB8fDB8fHww"},
+  { word: "Make", meaning: "(เมค) v. ทำ, สร้าง" ,img:"https://plus.unsplash.com/premium_photo-1661683887049-69e8ae0a6c92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFrZXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Manage", meaning: "(แมน'นิจ) v. จัดการ, ควบคุม" ,img:"https://plus.unsplash.com/premium_photo-1663040001568-f07cab70d71f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TWFuYWdlfGVufDB8fDB8fHww"},
+  { word: "Many", meaning: "(เมนี) adj., pron. จำนวนมาก" ,img:"https://images.unsplash.com/photo-1557837847-424ee109654e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWFueXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Market", meaning: "(มาร์'คิท) n., v. ตลาด, ขาย" ,img:"https://plus.unsplash.com/premium_photo-1686529896385-8a8d581d0225?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFya2V0fGVufDB8fDB8fHww"},
+  { word: "Matter", meaning: "(แมท'เทอะ) n., v. เรื่องราว, มีความสำคัญ" ,img:"https://images.unsplash.com/photo-1597554069382-1342d20f5dd9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fE1hdHRlcnxlbnwwfHwwfHx8MA%3D%3D"},
+];
+
+
+export default words;
