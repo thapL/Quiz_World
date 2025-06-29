@@ -1,0 +1,13 @@
+const words = [
+  { word: "Each", meaning: "(อีช) det., pron., adv. แต่ละ, ทุกๆ คนหรือสิ่ง", img:"https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWFjaHxlbnwwfHwwfHx8MA%3D%3D" },
+  { word: "Earn", meaning: "(เอิร์น) v. ได้รับ (เงิน, คำชม), หารายได้", img:"https://plus.unsplash.com/premium_photo-1680643617902-ed97edcc1bb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWFybnxlbnwwfHwwfHx8MA%3D%3D" },
+  { word: "Earth", meaning: "(เอิร์ธ) n. โลก, พื้นดิน", img:"https://plus.unsplash.com/premium_photo-1679756099005-18998ce9ebc9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWFydGh8ZW58MHx8MHx8fDA%3D" },
+  { word: "Easy", meaning: "(อี'ซี) adj. ง่าย, สะดวก", img:"https://images.unsplash.com/photo-1567981963746-d5c083f63bfc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEVhc3l8ZW58MHx8MHx8fDA%3D" },
+  { word: "Eat", meaning: "(อีท) v. กิน, รับประทาน", img:"https://images.unsplash.com/photo-1605456831549-099f7e02822e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RWF0fGVufDB8fDB8fHww" },
+  { word: "Edge", meaning: "(เอดจ์) n. ขอบ, ริม, ขอบเขต", img:"https://images.unsplash.com/photo-1526210572594-12db9d72aa83?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWRnZXxlbnwwfHwwfHx8MA%3D%3D" },
+  { word: "Education", meaning: "(เอดูเค'เชิน) n. การศึกษา, การเรียนรู้", img:"https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWR1Y2F0aW9ufGVufDB8fDB8fHww" },
+  { word: "Effect", meaning: "(อิ'เฟคทฺ) n. ผลกระทบ, ผลลัพธ์", img:"https://plus.unsplash.com/premium_photo-1675826927352-e99efbab36d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWZmZWN0fGVufDB8fDB8fHww" },
+  { word: "Effort", meaning: "(เอฟ'เฟิร์ท) n. ความพยายาม, ความมุ่งมั่น", img:"https://plus.unsplash.com/premium_photo-1664304707130-04095161fe32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWZmb3J0fGVufDB8fDB8fHww" },
+  { word: "Elderly", meaning: "(เอล'เดอะลี่) adj. สูงอายุ, ผู้สูงวัย", img:"https://plus.unsplash.com/premium_photo-1674855780695-b5d5c3e86b88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWxkZXJseXxlbnwwfHwwfHx8MA%3D%3D" },
+];
+export default words;

@@ -1,0 +1,15 @@
+const words = [
+  { word: "Job", meaning: "(จ็อบ) n. งาน, อาชีพ" ,img:"https://plus.unsplash.com/premium_photo-1663091354914-7b4e0b00731e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Sm9ifGVufDB8fDB8fHww"},
+  { word: "Join", meaning: "(จอยน์) v. เข้าร่วม, เชื่อมต่อ" ,img:"https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Sm9pbnxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Journey", meaning: "(เจอร์'นี) n. การเดินทาง" ,img:"https://plus.unsplash.com/premium_photo-1661944456241-c920f93bd87b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Sm91cm5leXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Judge", meaning: "(จัดจฺ) n., v. ผู้พิพากษา, ตัดสิน" ,img:"https://plus.unsplash.com/premium_photo-1694281930432-18b307e102b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SnVkZ2V8ZW58MHx8MHx8fDA%3D"},
+  { word: "Juice", meaning: "(จูซ) n. น้ำผลไม้" ,img:"https://plus.unsplash.com/premium_photo-1663126827264-409d695e0be7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SnVpY2V8ZW58MHx8MHx8fDA%3D"},
+  { word: "Jump", meaning: "(จัมพฺ) v., n. กระโดด, การกระโดด" ,img:"https://plus.unsplash.com/premium_photo-1661927982818-9f7ea45c45ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SnVtcHxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Junior", meaning: "(จู'เนียร์) adj., n. ระดับล่าง, ผู้ที่อายุน้อยกว่า" ,img:"https://images.unsplash.com/photo-1548077880-656c402b344e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SnVuaW9yfGVufDB8fDB8fHww"},
+  { word: "Just", meaning: "(จัสทฺ) adv., adj. เพียงแค่, ยุติธรรม" ,img:"https://plus.unsplash.com/premium_photo-1687920396462-a2a19735db4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEp1c3R8ZW58MHx8MHx8fDA%3D"},
+  { word: "Justice", meaning: "(จัส'ทิส) n. ความยุติธรรม" ,img:"https://images.unsplash.com/photo-1591189824361-e61ccc736d44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEp1c3RpY2V8ZW58MHx8MHx8fDA%3D"},
+  { word: "Joke", meaning: "(โจค) n., v. เรื่องตลก, พูดเล่น" ,img:"https://images.unsplash.com/photo-1681641095463-b4d3693a0ee3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Sm9rZXxlbnwwfHwwfHx8MA%3D%3D"},
+];
+
+
+export default words;
