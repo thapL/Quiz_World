@@ -10,7 +10,7 @@ import GustTheQxfordVacab from "./game/guessTheQxfordVocabulary.jsx";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="Quiz_World/" element={<Home />} />
         <Route path="/part" element={<PartOfSpeech />} />
