@@ -1,25 +1,80 @@
-export default function Quiz({ quizIndex, score, options, currentWord, handleAnswer, showResult, isCorrect }) {
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+export default function Quiz({
+  quizIndex,
+  score,
+  options,
+  currentWord,
+  handleAnswer,
+  showResult,
+}) {
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+  const handleClick = (option) => {
+    if (!showResult) {
+      setSelectedAnswer(option);
+      handleAnswer(option);
+    }
+  };
+
   return (
-    <>
-      <p className="mb-2 text-[#fff8f0]">คำที่ {quizIndex + 1} / 10 | คะแนน: {score}</p>
-      <h2 className="text-2xl font-bold text-[#ffaa00] mb-6">{currentWord.word}</h2>
-      <div className="grid grid-cols-2 gap-4">
-        {options.map((opt, i) => (
-          <button
-            key={i}
-            onClick={() => handleAnswer(opt)}
-            disabled={showResult}
-            className=" bg-[#00a58b] hover:bg-[#00dec0] text-[#fff8f0] font-medium py-2 rounded-xl transition-all hover:scale-105"
-          >
-            {opt}
-          </button>
-        ))}
+    <div className="space-y-6">
+      {/* คำถาม */}
+      <div className="mb-6">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-yellow-300 drop-shadow">
+          {quizIndex + 1}. {currentWord?.word}
+        </h2>
+        <p className="text-slate-300 mt-2">เลือกความหมายที่ถูกต้อง</p>
       </div>
-      {showResult && (
-        <div className={`mt-4 text-lg font-bold text-[#ffaa00]`}>
-          {isCorrect ? "✅ ถูกต้อง!" : <>❌ คำตอบที่ถูกคือ <span className='text-[#fff8f0]'>{currentWord.meaning}</span></>}
-        </div>
-      )}
-    </>
+
+      {/* ตัวเลือก */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {options.map((option, idx) => {
+          let btnClass =
+            "py-4 px-6 rounded-2xl font-bold shadow-lg transition duration-300 ";
+
+          if (showResult) {
+            if (option === currentWord?.meaning) {
+              btnClass += "bg-emerald-600 text-white"; // ✅ ถูก
+            } else if (
+              option === selectedAnswer &&
+              option !== currentWord?.meaning
+            ) {
+              btnClass += "bg-red-600 text-white"; // ❌ ผิด
+            } else {
+              btnClass += "bg-slate-800 text-slate-300"; // อื่นๆ
+            }
+          } else {
+            btnClass +=
+              "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black hover:brightness-110 hover:scale-105";
+          }
+
+          return (
+            <motion.button
+              key={idx}
+              onClick={() => handleClick(option)}
+              whileTap={{ scale: 0.95 }}
+              animate={
+                showResult &&
+                selectedAnswer === option &&
+                option !== currentWord?.meaning
+                  ? { x: [0, -10, 10, -10, 10, 0] } // shake effect
+                  : {}
+              }
+              transition={{ duration: 0.4 }}
+              className={btnClass}
+            >
+              {option}
+            </motion.button>
+          );
+        })}
+      </div>
+
+      {/* คะแนน */}
+      <div className="text-slate-400 mt-4 text-sm">
+        คะแนน: <span className="font-bold text-white">{score}</span>
+      </div>
+    </div>
   );
 }
