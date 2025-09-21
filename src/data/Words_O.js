@@ -1,0 +1,15 @@
+const words = [
+  { word: "Object", meaning: "(ออบ'เจคทฺ) n., v. วัตถุ, คัดค้าน" ,img:"https://plus.unsplash.com/premium_photo-1668704252725-52cc74ef3f39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T2JqZWN0fGVufDB8fDB8fHww"},
+  { word: "Obtain", meaning: "(อับเทน') v. ได้รับ, ได้มา" ,img:"https://plus.unsplash.com/premium_photo-1713628398411-388c9e742195?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fE9idGFpbnxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Obvious", meaning: "(ออบ'เวียส) adj. ชัดเจน, เห็นได้ชัด" ,img:"https://plus.unsplash.com/premium_photo-1691622501112-5b93fb3dcdd2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8T2J2aW91c3xlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Occasion", meaning: "(อะเค'เชิน) n. โอกาส, วาระ" ,img:"https://images.unsplash.com/photo-1651313948618-31644c7fec18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fE9jY2FzaW9ufGVufDB8fDB8fHww"},
+  { word: "Occur", meaning: "(อะเคอร์') v. เกิดขึ้น" ,img:"https://images.unsplash.com/photo-1598444800859-5b5ead05ca18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxPY2N1cnxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Ocean", meaning: "(โอ'เชิน) n. มหาสมุทร" ,img:"https://plus.unsplash.com/premium_photo-1669750791963-ec6f3a565fb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T2NlYW58ZW58MHx8MHx8fDA%3D"},
+  { word: "Offer", meaning: "(ออฟ'เฟอะ) v., n. เสนอ, ข้อเสนอ" ,img:"https://plus.unsplash.com/premium_photo-1670509045675-af9f249b1bbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fE9mZmVyfGVufDB8fDB8fHww"},
+  { word: "Office", meaning: "(ออฟ'ฟิซ) n. สำนักงาน" ,img:"https://plus.unsplash.com/premium_photo-1670315264879-59cc6b15db5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T2ZmaWNlfGVufDB8fDB8fHww"},
+  { word: "Often", meaning: "(ออฟ'เทิน) adv. บ่อยๆ" ,img:"https://plus.unsplash.com/premium_photo-1671493287218-428148f5b39b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxPZnRlbnxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Opinion", meaning: "(อะพิน'ยัน) n. ความคิดเห็น" ,img:"https://plus.unsplash.com/premium_photo-1663099662958-87a2b441ebab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T3BpbmlvbnxlbnwwfHwwfHx8MA%3D%3D"},
+];
+
+
+export default words;

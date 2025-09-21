@@ -1,0 +1,15 @@
+const words = [
+  { word: "Unable", meaning: "(อันเอ'เบิล) adj. ไม่สามารถ" ,img:"https://images.unsplash.com/photo-1652520358363-5522439a68b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fFVuYWJsZXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Uncertain", meaning: "(อันเซอ'เทิน) adj. ไม่แน่นอน" ,img:"https://images.unsplash.com/photo-1502298411556-0b02524812cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VW5jZXJ0YWlufGVufDB8fDB8fHww"},
+  { word: "Uncle", meaning: "(อัง'เคิล) n. ลุง, อา, น้า" ,img:"https://plus.unsplash.com/premium_photo-1672297543351-17987c5c9361?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VW5jbGV8ZW58MHx8MHx8fDA%3D"},
+  { word: "Under", meaning: "(อัน'เดอะ) prep., adv. ใต้, อยู่ภายใต้" ,img:"https://plus.unsplash.com/premium_photo-1723874544310-6b495856a446?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VW5kZXJ8ZW58MHx8MHx8fDA%3D"},
+  { word: "Understand", meaning: "(อันเดอสแทนดฺ) v. เข้าใจ" ,img:"https://plus.unsplash.com/premium_photo-1661749251880-10dd866048d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VW5kZXJzdGFuZHxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Unit", meaning: "(ยู'นิต) n. หน่วย" ,img:"https://images.unsplash.com/photo-1589955898954-9c8d4bb86823?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzc4fHxVbml0fGVufDB8fDB8fHww"},
+  { word: "University", meaning: "(ยูนิเวอร์'ซิที) n. มหาวิทยาลัย" ,img:"https://images.unsplash.com/20/cambridge.JPG?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VW5pdmVyc2l0eXxlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Unless", meaning: "(อัน'เลส) conj. นอกจากว่า, ถ้าไม่" ,img:"https://images.unsplash.com/photo-1650098277031-919aac60a9e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFVubGVzc3xlbnwwfHwwfHx8MA%3D%3D"},
+  { word: "Until", meaning: "(อัน'ทิล) prep., conj. จนกระทั่ง" ,img:"https://images.unsplash.com/photo-1539614712445-33db8da8b8ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fFVudGlsfGVufDB8fDB8fHww"},
+  { word: "Up", meaning: "(อัพ) adv., prep. ขึ้น, ข้างบน" ,img:"https://images.unsplash.com/photo-1495903546524-cdb71d0aed7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFVwfGVufDB8fDB8fHww"}
+];
+
+
+export default words;
