@@ -2,7 +2,7 @@ import "./css/App.css";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import PartOfSpeech from "./pages/PartOfSpeech.jsx";
 import NounPage from "./pages/Noun.jsx";
 import GustTheQxfordVacab from "./game/guessTheQxfordVocabulary.jsx";
@@ -12,10 +12,10 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="Quiz_World/" element={<Home />} />
         <Route path="/part" element={<PartOfSpeech />} />
         <Route path="/noun" element={<NounPage />} />
-        <Route path="/guess" element={<GustTheQxfordVacab />} />
+        <Route path="Quiz_World/guess" element={<GustTheQxfordVacab />} />
       </Routes>
     </>
   );

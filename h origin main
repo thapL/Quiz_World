@@ -1,0 +1,16 @@
+*   [33m7618ab4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m resolve merge conflicts
+[31m|[m[32m\[m  
+[31m|[m * [33m52591c2[m[33m ([m[1;32mmaster[m[33m)[m save changes before cleanup
+[31m|[m * [33m688ecd9[m Add file gusessTheQxfordVocabulary  and add change css
+[31m|[m * [33mcced8e8[m commit
+[31m|[m * [33m408520c[m Add Rountes and change when click navbar
+[31m|[m * [33mb2c4619[m Add file gusessTheQxfordVocabulary  and add change css
+* [33mb71561a[m WIP: save vite config changes
+* [33ma4922f2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m add gitignore for dist
+* [33ma075dcd[m Organize files
+* [33m302a93d[m Initial commit of React project
+* [33m89e8262[m add word
+* [33m89ea8c9[m adap flashCard and add word
+* [33md54b85a[m fix bug press the answer button again & divide function be filde
+* [33maed45a8[m Add tailwind add change css
+* [33md3c2c8f[m first commit
