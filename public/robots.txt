@@ -1,0 +1,6 @@
+# อนุญาตให้บอทของ Search Engine ทุกตัวเข้าถึงได้
+User-agent: *
+Allow: /
+
+# ชี้ตำแหน่ง Sitemap ของเว็บ
+Sitemap: https://quizvoca.com/sitemap.xml
