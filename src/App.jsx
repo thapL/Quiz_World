@@ -12,10 +12,10 @@ function App() {
     <>
       {/* <Navbar /> */}
       <Routes>
-        <Route path="Quiz_World/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/part" element={<PartOfSpeech />} />
         <Route path="/noun" element={<NounPage />} />
-        <Route path="Quiz_World/guess" element={<GustTheQxfordVacab />} />
+        <Route path="/guess" element={<GustTheQxfordVacab />} />
       </Routes>
     </>
   );
