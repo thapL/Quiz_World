@@ -14,20 +14,42 @@ export default function GuessTheOxfordVocab() {
   const [score, setScore] = useState(0);
   const [wrongAnswers, setWrongAnswers] = useState([]);
   const [selectedLetter, setSelectedLetter] = useState(null);
-  const [words, setWords] = useState([]);
-  const [confetti, setConfetti] = useState(false);
 
+  const [allWords, setAllWords] = useState([]); // pool คำศัพท์ทั้งหมด
+  const [words, setWords] = useState([]); // 10 คำที่เล่นรอบนี้
+
+  const [confetti, setConfetti] = useState(false);
   const containerRef = useRef(null);
 
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
+  // สุ่ม array
   const shuffleArray = (array) => [...array].sort(() => Math.random() - 0.5);
 
+  // ✅ เลือกชุดใหม่จาก pool
+  const pickNewSet = (pool) => {
+    if (pool.length === 0) {
+      alert("🎉 คำศัพท์ตัวอักษรนี้หมดแล้ว!");
+      setWords([]);
+      return;
+    }
+    const shuffled = shuffleArray(pool);
+    const newSet = shuffled.slice(0, 10); // เอามา 10 คำ
+    setWords(newSet);
+
+    // เอา 10 คำนี้ออกจาก pool
+    const remaining = pool.filter((w) => !newSet.includes(w));
+    setAllWords(remaining);
+  };
+
+  // ✅ สร้าง options
   const generateOptions = () => {
+    if (words.length === 0) return;
     const current = words[Math.min(quizIndex, words.length - 1)];
     const choices = new Set([current.meaning]);
-    while (choices.size < 4) {
-      const random = words[Math.floor(Math.random() * words.length)].meaning;
+    while (choices.size < 4 && allWords.length > 0) {
+      const random =
+        allWords[Math.floor(Math.random() * allWords.length)].meaning;
       choices.add(random);
     }
     setOptions(shuffleArray(Array.from(choices)));
@@ -40,8 +62,8 @@ export default function GuessTheOxfordVocab() {
 
     if (correct) {
       setScore(score + 1);
-      setConfetti(false); // reset ก่อน
-      setTimeout(() => setConfetti(true), 50); // trigger ใหม่
+      setConfetti(false);
+      setTimeout(() => setConfetti(true), 50);
     } else {
       setWrongAnswers([...wrongAnswers, current]);
     }
@@ -57,38 +79,69 @@ export default function GuessTheOxfordVocab() {
     }, 1500);
   };
 
+  // ✅ เริ่มใหม่
   const restartGame = () => {
     setMode("select");
     setFlashIndex(0);
     setQuizIndex(0);
     setScore(0);
     setWrongAnswers([]);
+    setWords([]);
+    setAllWords([]);
   };
 
+  // ✅ ไปเซ็ตใหม่ (Next 10 words)
+  const goNextSet = () => {
+    setFlashIndex(0);
+    setQuizIndex(0);
+    setScore(0);
+    setWrongAnswers([]);
+    pickNewSet(allWords);
+    setMode("flashcard");
+  };
+
+  // ✅ ไปตัวอักษรถัดไป
   const goNextLetter = () => {
     const currentIndex = alphabet.indexOf(selectedLetter);
     if (currentIndex < alphabet.length - 1) {
       const nextLetter = alphabet[currentIndex + 1];
       setSelectedLetter(nextLetter);
-      setMode("flashcard");
       setFlashIndex(0);
       setQuizIndex(0);
       setScore(0);
       setWrongAnswers([]);
+      setMode("flashcard"); // 🔑 สำคัญ: บังคับให้ไป flashcard ของตัวถัดไป
     } else {
       alert("🎉 คุณเล่นครบทุกตัวอักษรแล้ว!");
     }
   };
 
-  // โหลดคำศัพท์
+  // โหลดคำศัพท์จาก JSON
   useEffect(() => {
     if (!selectedLetter) return;
+
     const loadWords = async () => {
       try {
-        const module = await import(`../data/Words_${selectedLetter}.js`);
-        setWords(module.default || []);
+        const url = `/data/Words_${selectedLetter}.json`;
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`ไม่พบไฟล์ JSON (${response.status})`);
+        }
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setAllWords(data);
+          pickNewSet(data);
+        } else if (data.words && Array.isArray(data.words)) {
+          setAllWords(data.words);
+          pickNewSet(data.words);
+        } else {
+          console.error("⚠️ JSON format ไม่ถูกต้อง:", data);
+          setAllWords([]);
+          setWords([]);
+        }
       } catch (error) {
         console.error(`❌ โหลดคำศัพท์ "${selectedLetter}" ไม่สำเร็จ`, error);
+        setAllWords([]);
         setWords([]);
       }
     };
@@ -114,13 +167,13 @@ export default function GuessTheOxfordVocab() {
           <Confetti
             width={containerRef.current.offsetWidth}
             height={containerRef.current.offsetHeight}
-            recycle={false} // ❌ ไม่วนซ้ำ
-            numberOfPieces={100} // จำนวนเศษกระดาษ
-            gravity={0.5} // แรงโน้มถ่วงแรง ทำให้ตกไว
-            tweenDuration={1500} // ✅ ให้ตกหมดภายใน 1.5 วิ
-            initialVelocityY={20} // ความเร็วเริ่มต้น
-            initialVelocityX={5} // กระจายด้านข้าง
-            colors={["#FACC15", "#F59E0B", "#FFD700", "#FFB703"]} // เหลือง-ส้ม
+            recycle={false}
+            numberOfPieces={100}
+            gravity={0.5}
+            tweenDuration={1500}
+            initialVelocityY={20}
+            initialVelocityX={5}
+            colors={["#FACC15", "#F59E0B", "#FFD700", "#FFB703"]}
           />
         )}
 
@@ -222,6 +275,7 @@ export default function GuessTheOxfordVocab() {
                 wrongAnswers={wrongAnswers}
                 restartGame={restartGame}
                 goNextLetter={goNextLetter}
+                goNextSet={goNextSet}
               />
             </motion.div>
           )}

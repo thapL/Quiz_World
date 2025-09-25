@@ -6,6 +6,7 @@ export default function Result({
   wrongAnswers,
   restartGame,
   goNextLetter,
+  goNextSet, // 👈 เพิ่ม prop
 }) {
   const percentage = Math.round((score / total) * 100);
 
@@ -20,6 +21,7 @@ export default function Result({
         🎉 ผลการทดสอบ
       </motion.h2>
 
+      {/* สรุปคะแนน */}
       <motion.div
         className="space-y-4"
         initial={{ opacity: 0 }}
@@ -48,6 +50,7 @@ export default function Result({
         <p className="text-slate-300">{percentage}%</p>
       </motion.div>
 
+      {/* รายการคำผิด */}
       {wrongAnswers.length > 0 && (
         <motion.div
           className="bg-white/10 p-6 rounded-2xl shadow-lg text-left"
@@ -72,6 +75,7 @@ export default function Result({
         </motion.div>
       )}
 
+      {/* ปุ่มควบคุม */}
       <div className="flex justify-center gap-4">
         {/* ปุ่มเลือกหมวดใหม่ */}
         <motion.button
@@ -87,7 +91,21 @@ export default function Result({
           🔄
         </motion.button>
 
-        {/* ปุ่มถัดไป */}
+        {/* ปุ่ม Next 10 words */}
+        <motion.button
+          onClick={goNextSet}
+          className="px-8 py-3 bg-orange-500 text-white font-semibold rounded-xl shadow-lg hover:bg-orange-400 transition hidden sm:block"
+        >
+          📚 Next 10 words
+        </motion.button>
+        <motion.button
+          onClick={goNextSet}
+          className="p-3 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-400 transition block sm:hidden"
+        >
+          📚
+        </motion.button>
+
+        {/* ปุ่มไปตัวอักษรถัดไป */}
         <motion.button
           onClick={goNextLetter}
           className="px-8 py-3 bg-emerald-600 text-white font-semibold rounded-xl shadow-lg hover:bg-emerald-500 transition hidden sm:block"
