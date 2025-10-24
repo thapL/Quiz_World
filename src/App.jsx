@@ -13,8 +13,8 @@ function App() {
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/part" element={<PartOfSpeech />} />
-        <Route path="/noun" element={<NounPage />} />
+         {/* <Route path="/part" element={<PartOfSpeech />} />
+        <Route path="/noun" element={<NounPage />} />*/}
         <Route path="/guess" element={<GustTheQxfordVacab />} />
       </Routes>
     </>
